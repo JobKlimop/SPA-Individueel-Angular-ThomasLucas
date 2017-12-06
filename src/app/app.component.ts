@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  loadedFeature = 'Home';
+  imagePath: string;
+
+  constructor() {
+    this.imagePath = '../../assets/img/DSC_0216.jpg';
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
