@@ -1,0 +1,17 @@
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-brand:enabled {
+  color: white;
+}
+
+.headerText {
+  color: white !important;
+  font-size:1em;
+  border-left: 1px solid white;
+}
+
+.active {
+  border-bottom: 3px solid white;
+}

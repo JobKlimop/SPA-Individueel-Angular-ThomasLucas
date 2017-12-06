@@ -1,0 +1,70 @@
+<div class="registerBox">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12" style="margin-top: 20px;">
+        <form (ngSubmit)="onRegister()">
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" formControlName="username" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="firstName">First name:</label>
+                <input type="text" id="firstName" formControlName="firstName" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName" formControlName="lastName" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="emailAddress">E-mail:</label>
+                <input type="text" id="emailAddress" formControlName="emailAddress" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" formControlName="password" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="col-xs-12" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-3">
+              <button class="btn btn-primary" type="submit">Register</button>
+            </div>
+            <div class="col-xs-3">
+              <button class="btn btn-danger" type="button">Cancel</button>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

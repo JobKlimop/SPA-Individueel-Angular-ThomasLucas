@@ -1,0 +1,12 @@
+.loginBox {
+  border: 1px solid lightgray;
+}
+
+.insideBox {
+  margin-top:10px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 10px;
+}
