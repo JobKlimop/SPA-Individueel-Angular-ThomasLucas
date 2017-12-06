@@ -1,3 +1,11 @@
+.navbar-default {
+  background-color: #FFA300;
+}
+
+.navbar-nav a{
+  background-color: #FFA300;
+}
+
 .navbar-brand {
   font-weight: bold;
 }
