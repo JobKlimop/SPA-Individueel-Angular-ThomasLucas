@@ -1,0 +1,17 @@
+.homeImage {
+  width: 100%;
+
+}
+
+.parentDiv {
+  margin-bottom: 30px;
+}
+
+.childDiv {
+  border-bottom: 1px solid lightgray;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.childDiv:hover {
+  box-shadow: 5px 5px 5px lightgray ;
+}
