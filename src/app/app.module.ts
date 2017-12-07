@@ -11,6 +11,9 @@ import { AccountComponent } from './account/account.component';
 import { RegisterComponent } from './account/register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './account/login/login.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RegisterService} from './services/register.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,12 @@ import { LoginComponent } from './account/login/login.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
