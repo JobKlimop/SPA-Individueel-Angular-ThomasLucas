@@ -13,7 +13,7 @@ export class RegisterService {
     console.log(this.url);
   }
 
-  public submitRegistration(account: Account): Promise<Account[]> {
+  public submitRegistration(account: Account): Promise<Account> {
     return this.http.post(
       this.url,
       JSON.stringify(account),
@@ -21,7 +21,7 @@ export class RegisterService {
       .toPromise()
       .then(response => {
         console.log(response);
-        return response.json() as Account;
+        return response.status;
       })
       .catch(error => {
         return this.handleError(error);
