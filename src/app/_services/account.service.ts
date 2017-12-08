@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Headers, Http} from '@angular/http';
 import {environment} from '../../environments/environment';
-import {Account} from '../account/account.model';
+import {Account} from '../_models/account.model';
 
 @Injectable()
-export class RegisterService {
+export class AccountService {
   private headers = new Headers({'Content-Type': 'application/json'});
   private url = environment.serverUrl + '/user';
   private account: Account[];
@@ -13,9 +13,13 @@ export class RegisterService {
     console.log(this.url);
   }
 
+  public getAccountById(account: Account): Promise<Account> {
+
+  }
+
   public submitRegistration(account: Account): Promise<Account> {
     return this.http.post(
-      this.url,
+      this.url + '/registration',
       JSON.stringify(account),
       {headers: this.headers})
       .toPromise()

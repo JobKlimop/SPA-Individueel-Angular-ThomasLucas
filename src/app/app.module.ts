@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,8 +13,9 @@ import { RegisterComponent } from './account/register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './account/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {RegisterService} from './services/register.service';
-import {HttpModule} from '@angular/http';
+import {AccountService} from './_services/account.service';
+import { AlertComponent } from './alert/alert.component';
+import {AuthGuard} from './_auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {HttpModule} from '@angular/http';
     AccountComponent,
     RegisterComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    AlertComponent,
+    AuthGuard
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import {HttpModule} from '@angular/http';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [RegisterService],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
