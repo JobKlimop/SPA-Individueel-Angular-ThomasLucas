@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Account} from '../_models/account.model';
-import 'rxjs/Rx';
+import * as rxjs from 'rxjs/Rx';
 import * as moment from 'moment';
 import {environment} from '../../environments/environment';
 import {tokenNotExpired} from 'angular2-jwt';

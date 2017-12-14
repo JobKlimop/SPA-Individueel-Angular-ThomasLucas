@@ -13,6 +13,7 @@ import {ImageService} from '../../_services/image.service';
 export class AddImageComponent implements OnInit {
   addImageForm: FormGroup;
   image: Image;
+  currentUser = localStorage.getItem('currentUser');
 
   constructor(private route: ActivatedRoute,
               private imageService: ImageService,
