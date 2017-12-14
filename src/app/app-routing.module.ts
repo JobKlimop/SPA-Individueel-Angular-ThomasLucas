@@ -11,7 +11,7 @@ import {ImageDetailsComponent} from './images/image-details/image-details.compon
 import {ImageDetailsResolver} from './_resolvers/image-details-resolver';
 
 const appRoutes: Routes = [
-  {path: '/', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'images', component: ImagesComponent},
   {path: 'imagedetails/:id', component: ImageDetailsComponent
