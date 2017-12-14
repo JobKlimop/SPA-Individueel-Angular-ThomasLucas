@@ -1,0 +1,61 @@
+<h1>Add your image!</h1>
+<div class="addImageBox">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6" style="margin-top: 20px;">
+        <form [formGroup]="addImageForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" formControlName="title" class="form-control" required>
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group" formGroupName="description">
+                <label for="description">Description:</label>
+                <input type="text" id="description" formControlName="description" class="form-control" required>
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control" #imageUrl required>
+              </div>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+              <p>This image will be uploaded by {{currentUser}}</p>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+          <div class="col-xs-12" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-3">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+            <div class="col-xs-3">
+              <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-6" style="margin-top: 40px">
+        <img [src]="imageUrl.value" class="img-responsive" style="max-height: 300px;">
+      </div>
+    </div>
+  </div>
+</div>

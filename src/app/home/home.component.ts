@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {ImageService} from '../_services/image.service';
+import {Image} from '../../../shared/images.model';
 
 @Component({
   selector: 'app-home',
@@ -6,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  imagePath: string;
+  private images: Image[];
 
-  constructor() {
-    this.imagePath = '../../../assets/img/DSC_0489.jpg';
+  constructor(private imageService: ImageService) {
   }
 
   ngOnInit() {
+    this.imageService.getImages()
+      .then(images => this.images = images);
   }
 
 }

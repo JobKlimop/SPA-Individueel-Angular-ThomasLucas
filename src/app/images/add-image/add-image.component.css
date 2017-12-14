@@ -1,0 +1,8 @@
+.addImageBox {
+  border: solid 1px lightgray;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+<div class="imageDetailBox">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-6">
+          <img
+            [src]="image.imageUrl"
+            class="imageDetailed">
+        </div>
+        <div class="col-xs-6 specDiv">
+          <ul>
+            <li>Title:</li>
+            <li>{{image.title}}</li>
+            <hr>
+            <li>Description:</li>
+            <li *ngFor="let description of image.description">{{description.description}}</li>
+            <hr>
+            <li>Uploaded on:</li>
+            <li *ngFor="let description of image.description">{{description.uploadDate}}</li>
+            <hr>
+            <li>Uploaded by:</li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-create-comment></app-create-comment>

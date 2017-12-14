@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" style="margin-top: 20px;">
+      <form [formGroup]="addCommentForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="comment">Comment:</label>
+              <textarea type="text" id="comment" formControlName="comment" class="form-control" required></textarea>
+            </div>
+          </div>
+          <div class="col-xs-3"></div>
+        </div>
+        <div class="col-xs-12" style="margin-top: 20px; margin-bottom: 20px;">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-3">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+          </div>
+          <div class="col-xs-3"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

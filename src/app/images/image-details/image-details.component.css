@@ -1,0 +1,22 @@
+.imageDetailBox {
+  border: 1px solid lightgray;
+}
+
+.imageDetailed {
+  width: 100%;
+}
+
+img {
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-top:20px;
+  list-style-type: none;
+  color: gray;
+}
+
+button {
+  width: 100%;
+}

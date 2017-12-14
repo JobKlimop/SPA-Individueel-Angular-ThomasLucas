@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,9 +12,18 @@ import { AccountComponent } from './account/account.component';
 import { RegisterComponent } from './account/register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './account/login/login.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {RegisterService} from './services/register.service';
-import {HttpModule} from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountService } from './_services/account.service';
+import {AuthService} from './_services/auth.service';
+import {HttpClientModule} from '@angular/common/http';
+import { AddImageComponent } from './images/add-image/add-image.component';
+import {ImageService} from './_services/image.service';
+import { ImageDetailsComponent } from './images/image-details/image-details.component';
+import { ImageItemComponent } from './images/image-item/image-item.component';
+import {RouterModule} from '@angular/router';
+import { CommentsComponent } from './comments/comments.component';
+import { CreateCommentComponent } from './comments/create-comment/create-comment.component';
+import {CommentService} from './_services/comment.service';
 
 @NgModule({
   declarations: [
@@ -25,16 +35,24 @@ import {HttpModule} from '@angular/http';
     AccountComponent,
     RegisterComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    AddImageComponent,
+    ImageDetailsComponent,
+    ImageItemComponent,
+    CommentsComponent,
+    CreateCommentComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
-  providers: [RegisterService],
+  providers: [AccountService, AuthService, ImageService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

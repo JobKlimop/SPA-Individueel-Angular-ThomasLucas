@@ -23,3 +23,7 @@
 .active {
   border-bottom: 3px solid white;
 }
+
+.headerAnchor {
+  cursor: pointer;
+}

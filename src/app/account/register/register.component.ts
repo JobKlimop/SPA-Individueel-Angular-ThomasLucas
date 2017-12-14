@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Data, Router} from '@angular/router';
-import {RegisterService} from '../../services/register.service';
-import {Account} from '../account.model';
+import {AccountService} from '../../_services/account.service';
+import {Account} from '../../_models/account.model';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   account: Account;
 
   constructor(private route: ActivatedRoute,
-              private registerService: RegisterService,
+              private registerService: AccountService,
               private router: Router) { }
 
   ngOnInit() {
@@ -27,7 +27,10 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister() {
-    this.registerService.submitRegistration(this.registerForm.value);
+    this.registerService.submitRegistration(this.registerForm.value)
+      .then(response => {
+        return response;
+      });
     this.onCancel();
     console.log(this.registerForm.value.username);
   }
