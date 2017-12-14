@@ -34,4 +34,4 @@ const server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-server.listen(port, () => console.log(`Angular server running on port ${port}`) || '4200');
+server.listen(port, "0.0.0.0", () => console.log(`Angular server running on port ${port}`) || '4200');
