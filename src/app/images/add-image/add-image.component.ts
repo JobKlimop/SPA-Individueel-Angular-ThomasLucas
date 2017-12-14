@@ -13,7 +13,6 @@ import {ImageService} from '../../_services/image.service';
 export class AddImageComponent implements OnInit {
   addImageForm: FormGroup;
   image: Image;
-  currentUser = localStorage.getItem('currentUser');
 
   constructor(private route: ActivatedRoute,
               private imageService: ImageService,
@@ -41,7 +40,7 @@ export class AddImageComponent implements OnInit {
   private initForm() {
     const imageTitle = '';
     const imageDescription = '';
-    const imageUploadDate = Date.now()  ;
+    const imageUploadDate = Date.now();
     const imageUrl = '';
 
     this.addImageForm = new FormGroup({

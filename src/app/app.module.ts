@@ -21,6 +21,9 @@ import {ImageService} from './_services/image.service';
 import { ImageDetailsComponent } from './images/image-details/image-details.component';
 import { ImageItemComponent } from './images/image-item/image-item.component';
 import {RouterModule} from '@angular/router';
+import { CommentsComponent } from './comments/comments.component';
+import { CreateCommentComponent } from './comments/create-comment/create-comment.component';
+import {CommentService} from './_services/comment.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import {RouterModule} from '@angular/router';
     AddImageComponent,
     ImageDetailsComponent,
     ImageItemComponent,
+    CommentsComponent,
+    CreateCommentComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,7 @@ import {RouterModule} from '@angular/router';
     AppRoutingModule,
     RouterModule
   ],
-  providers: [AccountService, AuthService, ImageService],
+  providers: [AccountService, AuthService, ImageService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

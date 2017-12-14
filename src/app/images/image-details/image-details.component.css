@@ -16,3 +16,7 @@ ul {
   list-style-type: none;
   color: gray;
 }
+
+button {
+  width: 100%;
+}
