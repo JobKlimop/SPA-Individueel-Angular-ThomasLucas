@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="col-xs-12 col-md-12 navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a [routerLink]="['']" class="navbar-brand">ImageWorld</a>
@@ -9,9 +9,13 @@
         <li routerLinkActive="active"><a [routerLink]="['images']" class="headerText">Images</a></li>
         <li routerLinkActive="active"><a [routerLink]="['contact']" class="headerText">Contact</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul *ngIf="userLoggedIn === false" class="nav navbar-nav navbar-right">
         <li routerLinkActive="active"><a [routerLink]="['register']" class="headerText">Register</a></li>
         <li routerLinkActive="active"><a [routerLink]="['login']" class="headerText">Log in</a></li>
+      </ul>
+      <ul *ngIf="userLoggedIn === true" class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active"><a [routerLink]="['account']" class="headerText">Profile</a></li>
+        <li routerLinkActive="active"><a (click)="onLogout()" class="headerText headerAnchor">Log Out</a></li>
       </ul>
     </div>
   </div>

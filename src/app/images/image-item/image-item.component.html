@@ -1,0 +1,6 @@
+<div class="col-xs-4 childDiv" [routerLink]="['../imagedetails/' + image._id]" routerLinkActive="active">
+  <h4>{{image.title}}</h4>
+  <img
+    [src]="image.imageUrl || ''"
+    class="imageTile">
+</div>

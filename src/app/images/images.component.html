@@ -1,3 +1,6 @@
-<p>
-  images works!
-</p>
+<div class="col-xs-12 parentDiv">
+  <app-image-item
+    *ngFor="let image of images"
+    [image]="image">
+  </app-image-item>
+</div>

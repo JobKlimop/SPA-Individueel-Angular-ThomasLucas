@@ -27,7 +27,10 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister() {
-    this.registerService.submitRegistration(this.registerForm.value);
+    this.registerService.submitRegistration(this.registerForm.value)
+      .then(response => {
+        return response;
+      });
     this.onCancel();
     console.log(this.registerForm.value.username);
   }
